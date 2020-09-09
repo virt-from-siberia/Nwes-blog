@@ -1,0 +1,151 @@
+@import "variables";
+
+.auth {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  margin: 0 auto;
+  z-index: 999;
+
+  &__block {
+    @media screen and (max-width: 410px) {
+      width: 330px;
+      padding-top: 50px;
+    }
+
+    @media screen and (max-width: 320px) {
+      width: 300px;
+    }
+
+    &__content {
+      box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
+        0 -6px 16px -6px #00000006;
+      background-color: $authBgcontent;
+      background: url("../img/gbBlock.jpg");
+      background-size: cover;
+      border-radius: 5px;
+      padding: 5px 50px;
+
+      @media screen and (max-width: 410px) {
+        padding: 5 10px;
+      }
+
+      .registartion {
+        h2 {
+          padding-top: 50px;
+          font-size: 1.5em;
+          color: whitesmoke;
+          font-weight: 500;
+          text-align: center;
+          padding-bottom: 20px;
+
+          @media screen and (max-width: 410px) {
+            font-size: 1.2em;
+          }
+        }
+        p {
+          color: $authSecond;
+          text-align: center;
+        }
+        &__forms {
+          padding-top: 20px;
+
+          div {
+            position: relative;
+            input {
+              box-sizing: border-box;
+              width: 100%;
+              min-height: 44px;
+              margin-bottom: 10px;
+              border: 1px solid $authSecond;
+              padding: 10px;
+              border-radius: 4px;
+            }
+            .error {
+              p {
+                font-size: 12px;
+                padding: 3px;
+                color: $authError;
+              }
+            }
+
+            .show-password {
+              position: absolute;
+              top: 9px;
+              right: 9px;
+              opacity: 0.3;
+              cursor: pointer;
+            }
+          }
+
+          .spinner {
+            text-align: center;
+            svg {
+              color: white;
+            }
+          }
+
+          .btn {
+            cursor: pointer;
+            border: 0;
+            color: snow;
+            font-size: 12pt;
+            width: 100%;
+            min-height: 44px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin: 5px 0;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),
+              0 3px 3px rgba(0, 0, 0, 0.1);
+          }
+
+          .btn-register {
+            background-color: $authButtonLogin;
+
+            &:hover {
+              background-color: lighten($authButtonLogin, 5%);
+            }
+          }
+          .btn-login {
+            background-color: $authFirstGreen;
+            &:hover {
+              background-color: lighten($authFirstGreen, 5%);
+            }
+          }
+        }
+      }
+
+      .log-change {
+        color: blue;
+        font-weight: 400;
+        display: block;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        background-color: white;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        transition: 0.3s;
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        margin-top: 10px;
+        background-color: $authButtonYellow;
+
+        &:hover {
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        svg {
+          font-size: 15px;
+          margin-right: 5px;
+          position: relative;
+        }
+      }
+    }
+  }
+}

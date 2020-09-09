@@ -1,0 +1,89 @@
+@import "variables";
+
+.news {
+  background: url("../img/regBg.svg");
+  background-attachment: fixed;
+  overflow-y: scroll;
+  background-size: cover;
+  width: 100wh;
+  height: 100vh;
+  padding-top: 80px;
+
+  &__searchBar {
+    border: 1px solid $navBarBorder;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    align-items: center;
+    position: fixed;
+    background: $navBarBackground;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+
+    .search-blok {
+      margin-left: 15px;
+      svg {
+        position: relative;
+        top: 20px;
+        left: -5px;
+      }
+    }
+  }
+
+  &__container {
+    margin-top: 75px;
+    &-item {
+      max-width: 800px;
+      margin: 0 auto;
+      border: solid 1px $navBarBorder2;
+
+      background: white;
+      text-align: center;
+      margin-bottom: 5px;
+      transition: 0.2s;
+      padding: 5px;
+      &:hover {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      &.notapproved {
+        background: $navBarHoverBackground;
+
+        h2 {
+          border-bottom: 1px solid $navBarBorder3;
+        }
+
+        .info {
+          h3 {
+            color: $navBarFont;
+          }
+
+          p {
+            color: $navBarFont;
+          }
+        }
+      }
+
+      h2 {
+        color: $navBarFont;
+        border-bottom: 1px solid $homeFont;
+      }
+      p {
+        color: $navBarFont;
+      }
+
+      .info {
+        text-align: left;
+        margin-left: 50px;
+        h3 {
+          color: $homeFont;
+        }
+        p {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
